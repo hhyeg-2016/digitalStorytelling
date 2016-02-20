@@ -14,6 +14,7 @@ angular.module('dStory')
               })
               .state('main.submit', {
                 url: '/submit',
+                controller: 'submitController',
                 templateUrl: '/app/views/submit.html'
               })
         });
