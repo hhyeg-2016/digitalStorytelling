@@ -1,0 +1,32 @@
+<header>
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <!-- take up first 15% of toolbar -->
+            <span flex="15"></span>
+            <!-- logo that links to home page -->
+      <span flex="11">
+        <A NG-HREF="index.html"><img ng-src="/static/img/cg.png" /></A>
+      </span>
+
+      <span flex="50">
+
+
+        <A NG-HREF="index.html"><b>Chemistry Genealogy</b></A>
+
+
+
+      </span>
+      <span flex="7">
+        <a ui-sref="main.submit"> <md-button class="md-fab md-accent">
+            <md-icon md-svg-src="/static/img/ic_add_black_24px.svg"></md-icon>
+        </md-button> </a>
+        </span>
+      <span flex="7">
+
+
+      </span>
+        </div>
+    </md-toolbar>
+</header>
+
+<div ui-view></div>
