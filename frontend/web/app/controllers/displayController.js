@@ -1,11 +1,8 @@
 angular.module('dStory')
 .controller('displayController', ['$scope',
 function($scope) {
-<<<<<<< HEAD
   $scope.profilePicture = "http://localhost:5000/static/img/elderly-man-smile.jpg";
-=======
   $scope.pic = "static/img/elderly-man-smile.jpg";
->>>>>>> 2d89e4871865699ef82b3a80a56689424cebd25e
 
   $scope.data = [
     {
