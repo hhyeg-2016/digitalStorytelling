@@ -6,12 +6,6 @@ function($scope) {
   $scope.profilePicture = "http://localhost:5000/static/img/elderly-man-smile.jpg";
 
   $scope.pic = "static/img/elderly-man-smile.jpg";
-
-
-  $scope.profilePicture = "http://localhost:5000/static/img/elderly-man-smile.jpg";
-  $scope.pic = "static/img/elderly-man-smile.jpg";
-
-
   $scope.data = [
     {
       type: 'text',
