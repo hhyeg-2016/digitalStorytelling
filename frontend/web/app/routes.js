@@ -10,7 +10,8 @@ angular.module('dStory')
               })
               .state('main.display', {
                 url: '/display',
-                templateUrl: '/app/views/display.html'
+                templateUrl: '/app/views/display.html',
+                  controller: "displayController"
               })
               .state('main.submit', {
                 url: '/submit',
