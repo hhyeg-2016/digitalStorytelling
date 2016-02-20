@@ -20,6 +20,7 @@ function($scope, dataService) {
     }, function(error) {
       console.log(error);
     });
+    return p;
   };
 
   $scope.isPicture = function(datum) {
