@@ -7,8 +7,34 @@
     <md-button ng-disabled="true" class="md-raised md-accent">Invalid registration</md-button>
   </div>
 
+  <form>
+    Choose an upload type:
+    <input type="radio" ng-model="Picture" value="picture">Picture
+    <input type="radio" ng-model="Video" value="video">Video
+    <input type="radio" ng-model="Text" value="text">Text
+  </form>
+
+  <div ng-switch="uploadForm">
+    <div ng-switch-when="picture">
+      <md-button class="md-raised md-primary" type="upload" value="Upload">
+          Upload
+      </md-button>
+    </div>
+    <div ng-switch-when="video">
+      <md-button class="md-raised md-primary" type="upload" value="Upload">
+          Upload
+      </md-button>
+    </div>
+    <div ng-switch-when="text">
+      <form>
+        <p>Enter your text here:</p>
+        <input type="text" ng-model="storyText">
+      </form>
+    </div>
+  </div>
+
   <div ng-show="!registration">
-    <form name="userForm" ng-submit="submitLogin(loginUser)">
+    <form name="userForm" ng-submit="submivtLogin(loginUser)">
       <md-input-container class="md-block" flex-gt-xs>
         <label>Email</label>
         <input ng-model="loginUser.email" type="email" required>
@@ -35,24 +61,4 @@
     </form>
   </div>
 
-  <div ng-show="registration">
-    <form name="registerForm" ng-submit="submitRegistration(registerUser)">
-      <md-input-container class="md-block" flex-gt-xs>
-        <label>e-mail</label>
-        <input type="email" ng-model="registerUser.email" required>
-      </md-input-container>
-      <md-input-container class="md-block" flex-gt-xs>
-        <label>Password</label>
-        <input type="password" ng-model="registerUser.password" required>
-      </md-input-container>
-      <div layout="row" layout-align="center center">
-        <md-button class="md-raised md-primary" type="submit" value="Submit">
-          Register
-        </md-button>
-        <md-button class="md-raised md-primary" ng-click="cancelRegistration()">
-          cancel
-        </md-button>
-      </div>
-    </form>
-  <div>
 </md-dialog>
