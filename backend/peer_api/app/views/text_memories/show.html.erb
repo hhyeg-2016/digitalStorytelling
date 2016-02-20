@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @text_memory.text %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @text_memory.user %>
+</p>
+
+<%= link_to 'Edit', edit_text_memory_path(@text_memory) %> |
+<%= link_to 'Back', text_memories_path %>
