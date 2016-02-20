@@ -1,5 +1,7 @@
-angular.module('chemGeno')
-.service('dataService', funtion($q) {
+angular.module('dStory')
+.service('dataService', function($q) {
+  var pic = "static/img/elderly-man-smile.jpg";
+
   var mockData = [
     {
       type: 'text',
@@ -21,13 +23,23 @@ angular.module('chemGeno')
     return d.promise;
   };
 
+  var getPic = function() {
+    var d = $q.defer();
+    if(pic){
+      d.resolve(pic);
+    } else {
+      d.reject('unable to load pic');
+    }
+    return d.promise;
+  };
+
   var pushData = function(datum) {
     mockData.push(datum);
   };
 
   return {
     pushData: pushData,
-    getData: getData
+    getData: getData,
+    getPic: getPic
   };
-  
 });
