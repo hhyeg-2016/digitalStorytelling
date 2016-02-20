@@ -1,68 +1,173 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', 'x_lib', '--save' ]
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'generator-angularjs-library' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.37
 4 verbose node symlink /usr/bin/node
-5 verbose config Skipping project config: /home/shikitan/.npmrc. (matches userconfig)
-6 verbose cache add [ 'x_lib', null ]
-7 verbose cache add name=undefined spec="x_lib" args=["x_lib",null]
-8 verbose parsed url { protocol: null,
-8 verbose parsed url   slashes: null,
-8 verbose parsed url   auth: null,
-8 verbose parsed url   host: null,
-8 verbose parsed url   port: null,
-8 verbose parsed url   hostname: null,
-8 verbose parsed url   hash: null,
-8 verbose parsed url   search: null,
-8 verbose parsed url   query: null,
-8 verbose parsed url   pathname: 'x_lib',
-8 verbose parsed url   path: 'x_lib',
-8 verbose parsed url   href: 'x_lib' }
-9 silly lockFile 5e55d0a6-x-lib x_lib
-10 verbose lock x_lib /home/shikitan/.npm/5e55d0a6-x-lib.lock
-11 silly lockFile 5e55d0a6-x-lib x_lib
-12 silly lockFile 5e55d0a6-x-lib x_lib
-13 verbose addNamed [ 'x_lib', '' ]
-14 verbose addNamed [ null, '*' ]
-15 silly lockFile 4060e33c-x-lib x_lib@
-16 verbose lock x_lib@ /home/shikitan/.npm/4060e33c-x-lib.lock
-17 silly addNameRange { name: 'x_lib', range: '*', hasData: false }
-18 verbose request where is /x_lib
-19 verbose request registry https://registry.npmjs.org/
-20 verbose request id 555cdcb09fb2a6c7
-21 verbose url raw /x_lib
-22 verbose url resolving [ 'https://registry.npmjs.org/', './x_lib' ]
-23 verbose url resolved https://registry.npmjs.org/x_lib
-24 verbose request where is https://registry.npmjs.org/x_lib
-25 info trying registry request attempt 1 at 10:10:42
-26 http GET https://registry.npmjs.org/x_lib
-27 http 404 https://registry.npmjs.org/x_lib
-28 silly registry.get cb [ 404,
-28 silly registry.get   { 'content-type': 'application/json',
-28 silly registry.get     'cache-control': 'max-age=0',
-28 silly registry.get     'content-length': '2',
-28 silly registry.get     'accept-ranges': 'bytes',
-28 silly registry.get     date: 'Sat, 20 Feb 2016 17:10:44 GMT',
-28 silly registry.get     via: '1.1 varnish',
-28 silly registry.get     age: '0',
-28 silly registry.get     connection: 'keep-alive',
-28 silly registry.get     'x-served-by': 'cache-sjc3124-SJC',
-28 silly registry.get     'x-cache': 'MISS',
-28 silly registry.get     'x-cache-hits': '0',
-28 silly registry.get     'x-timer': 'S1455988244.416797,VS0,VE347' } ]
-29 silly lockFile 4060e33c-x-lib x_lib@
-30 silly lockFile 4060e33c-x-lib x_lib@
-31 error 404 Not Found
-31 error 404
-31 error 404 'x_lib' is not in the npm registry.
-31 error 404 You should bug the author to publish it
-31 error 404
-31 error 404 Note that you can also install from a
-31 error 404 tarball, folder, or http url, or git url.
-32 error System Linux 3.19.0-25-generic
-33 error command "/usr/bin/node" "/usr/bin/npm" "install" "x_lib" "--save"
-34 error cwd /home/shikitan/github/digitalStorytelling/frontend
-35 error node -v v0.10.37
-36 error npm -v 1.4.28
-37 error code E404
-38 verbose exit [ 1, true ]
+5 verbose cache add [ 'generator-angularjs-library', null ]
+6 verbose cache add name=undefined spec="generator-angularjs-library" args=["generator-angularjs-library",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'generator-angularjs-library',
+7 verbose parsed url   path: 'generator-angularjs-library',
+7 verbose parsed url   href: 'generator-angularjs-library' }
+8 silly lockFile fc39db75-generator-angularjs-library generator-angularjs-library
+9 verbose lock generator-angularjs-library /home/shikitan/.npm/fc39db75-generator-angularjs-library.lock
+10 silly lockFile fc39db75-generator-angularjs-library generator-angularjs-library
+11 silly lockFile fc39db75-generator-angularjs-library generator-angularjs-library
+12 verbose addNamed [ 'generator-angularjs-library', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile 38003f7a-generator-angularjs-library generator-angularjs-library@
+15 verbose lock generator-angularjs-library@ /home/shikitan/.npm/38003f7a-generator-angularjs-library.lock
+16 silly addNameRange { name: 'generator-angularjs-library',
+16 silly addNameRange   range: '*',
+16 silly addNameRange   hasData: false }
+17 verbose request where is /generator-angularjs-library
+18 verbose request registry https://registry.npmjs.org/
+19 verbose request id dfc1154732eb945a
+20 verbose url raw /generator-angularjs-library
+21 verbose url resolving [ 'https://registry.npmjs.org/',
+21 verbose url resolving   './generator-angularjs-library' ]
+22 verbose url resolved https://registry.npmjs.org/generator-angularjs-library
+23 verbose request where is https://registry.npmjs.org/generator-angularjs-library
+24 info trying registry request attempt 1 at 10:50:17
+25 http GET https://registry.npmjs.org/generator-angularjs-library
+26 http 200 https://registry.npmjs.org/generator-angularjs-library
+27 silly registry.get cb [ 200,
+27 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+27 silly registry.get     etag: '"8QJX1OU2OSWI71T6FY4KVTGCE"',
+27 silly registry.get     'content-type': 'application/json',
+27 silly registry.get     'cache-control': 'max-age=300',
+27 silly registry.get     'content-length': '21631',
+27 silly registry.get     'accept-ranges': 'bytes',
+27 silly registry.get     date: 'Sat, 20 Feb 2016 17:50:20 GMT',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     age: '0',
+27 silly registry.get     connection: 'keep-alive',
+27 silly registry.get     'x-served-by': 'cache-sjc3127-SJC',
+27 silly registry.get     'x-cache': 'MISS',
+27 silly registry.get     'x-cache-hits': '0',
+27 silly registry.get     'x-timer': 'S1455990620.644705,VS0,VE349',
+27 silly registry.get     vary: 'Accept' } ]
+28 silly addNameRange number 2 { name: 'generator-angularjs-library',
+28 silly addNameRange   range: '*',
+28 silly addNameRange   hasData: true }
+29 silly addNameRange versions [ 'generator-angularjs-library',
+29 silly addNameRange   [ '0.0.0',
+29 silly addNameRange     '1.0.2',
+29 silly addNameRange     '2.0.0',
+29 silly addNameRange     '3.0.0',
+29 silly addNameRange     '3.1.0',
+29 silly addNameRange     '3.2.0',
+29 silly addNameRange     '3.3.0',
+29 silly addNameRange     '3.3.1' ] ]
+30 verbose addNamed [ 'generator-angularjs-library', '3.3.1' ]
+31 verbose addNamed [ '3.3.1', '3.3.1' ]
+32 silly lockFile 999487e0-enerator-angularjs-library-3-3-1 generator-angularjs-library@3.3.1
+33 verbose lock generator-angularjs-library@3.3.1 /home/shikitan/.npm/999487e0-enerator-angularjs-library-3-3-1.lock
+34 silly lockFile 4c8a3e46-ator-angularjs-library-3-3-1-tgz https://registry.npmjs.org/generator-angularjs-library/-/generator-angularjs-library-3.3.1.tgz
+35 verbose lock https://registry.npmjs.org/generator-angularjs-library/-/generator-angularjs-library-3.3.1.tgz /home/shikitan/.npm/4c8a3e46-ator-angularjs-library-3-3-1-tgz.lock
+36 verbose addRemoteTarball [ 'https://registry.npmjs.org/generator-angularjs-library/-/generator-angularjs-library-3.3.1.tgz',
+36 verbose addRemoteTarball   'e9944fdfe08fb8064c7fc856fd4b0d598ef3f1ef' ]
+37 info retry fetch attempt 1 at 10:50:18
+38 verbose fetch to= /tmp/npm-3939-_m2rJDSX/registry.npmjs.org/generator-angularjs-library/-/generator-angularjs-library-3.3.1.tgz
+39 http GET https://registry.npmjs.org/generator-angularjs-library/-/generator-angularjs-library-3.3.1.tgz
+40 http 200 https://registry.npmjs.org/generator-angularjs-library/-/generator-angularjs-library-3.3.1.tgz
+41 silly lockFile 4c8a3e46-ator-angularjs-library-3-3-1-tgz https://registry.npmjs.org/generator-angularjs-library/-/generator-angularjs-library-3.3.1.tgz
+42 silly lockFile 4c8a3e46-ator-angularjs-library-3-3-1-tgz https://registry.npmjs.org/generator-angularjs-library/-/generator-angularjs-library-3.3.1.tgz
+43 silly lockFile 999487e0-enerator-angularjs-library-3-3-1 generator-angularjs-library@3.3.1
+44 silly lockFile 999487e0-enerator-angularjs-library-3-3-1 generator-angularjs-library@3.3.1
+45 silly lockFile 38003f7a-generator-angularjs-library generator-angularjs-library@
+46 silly lockFile 38003f7a-generator-angularjs-library generator-angularjs-library@
+47 silly resolved [ { name: 'generator-angularjs-library',
+47 silly resolved     version: '3.3.1',
+47 silly resolved     description: 'Yeoman generator to create an AngularJS component library',
+47 silly resolved     license: 'MIT',
+47 silly resolved     main: 'app/index.js',
+47 silly resolved     repository:
+47 silly resolved      { type: 'git',
+47 silly resolved        url: 'git+https://github.com/jvandemo/generator-angularjs-library.git' },
+47 silly resolved     author:
+47 silly resolved      { name: 'Jurgen Van de Moere',
+47 silly resolved        email: 'jurgen@webberid.com',
+47 silly resolved        url: 'https://github.com/jvandemo' },
+47 silly resolved     engines: { node: '>=0.10.0' },
+47 silly resolved     scripts: { test: 'mocha' },
+47 silly resolved     files: [ 'app' ],
+47 silly resolved     keywords:
+47 silly resolved      [ 'yeoman-generator',
+47 silly resolved        'angular',
+47 silly resolved        'angularjs',
+47 silly resolved        'library',
+47 silly resolved        'generator',
+47 silly resolved        'code' ],
+47 silly resolved     dependencies:
+47 silly resolved      { chalk: '^0.5.1',
+47 silly resolved        lodash: '^2.4.1',
+47 silly resolved        'yeoman-generator': '^0.17.0',
+47 silly resolved        yosay: '^0.3.0' },
+47 silly resolved     devDependencies: { mocha: '*' },
+47 silly resolved     peerDependencies: { yo: '>=1.0.0' },
+47 silly resolved     gitHead: 'd918c4d3d5ac67a769712274b5e29a1760a740b4',
+47 silly resolved     bugs: { url: 'https://github.com/jvandemo/generator-angularjs-library/issues' },
+47 silly resolved     homepage: 'https://github.com/jvandemo/generator-angularjs-library#readme',
+47 silly resolved     _id: 'generator-angularjs-library@3.3.1',
+47 silly resolved     _shasum: 'e9944fdfe08fb8064c7fc856fd4b0d598ef3f1ef',
+47 silly resolved     _from: 'generator-angularjs-library@',
+47 silly resolved     _npmVersion: '2.14.2',
+47 silly resolved     _nodeVersion: '4.0.0',
+47 silly resolved     _npmUser: { name: 'jvandemo', email: 'jurgen.van.de.moere@gmail.com' },
+47 silly resolved     maintainers: [ [Object] ],
+47 silly resolved     dist:
+47 silly resolved      { shasum: 'e9944fdfe08fb8064c7fc856fd4b0d598ef3f1ef',
+47 silly resolved        tarball: 'http://registry.npmjs.org/generator-angularjs-library/-/generator-angularjs-library-3.3.1.tgz' },
+47 silly resolved     directories: {},
+47 silly resolved     _resolved: 'https://registry.npmjs.org/generator-angularjs-library/-/generator-angularjs-library-3.3.1.tgz' } ]
+48 info install generator-angularjs-library@3.3.1 into /usr/lib
+49 info installOne generator-angularjs-library@3.3.1
+50 verbose lib/node_modules/generator-angularjs-library unbuild
+51 verbose tar unpack /home/shikitan/.npm/generator-angularjs-library/3.3.1/package.tgz
+52 silly lockFile c0623aa2-ules-generator-angularjs-library tar:///usr/lib/node_modules/generator-angularjs-library
+53 verbose lock tar:///usr/lib/node_modules/generator-angularjs-library /home/shikitan/.npm/c0623aa2-ules-generator-angularjs-library.lock
+54 silly lockFile 327c19cd-ularjs-library-3-3-1-package-tgz tar:///home/shikitan/.npm/generator-angularjs-library/3.3.1/package.tgz
+55 verbose lock tar:///home/shikitan/.npm/generator-angularjs-library/3.3.1/package.tgz /home/shikitan/.npm/327c19cd-ularjs-library-3-3-1-package-tgz.lock
+56 silly gunzTarPerm modes [ '775', '664' ]
+57 error Error: EACCES, mkdir '/usr/lib/node_modules/generator-angularjs-library'
+57 error  { [Error: EACCES, mkdir '/usr/lib/node_modules/generator-angularjs-library']
+57 error   errno: 3,
+57 error   code: 'EACCES',
+57 error   path: '/usr/lib/node_modules/generator-angularjs-library',
+57 error   fstream_type: 'Directory',
+57 error   fstream_path: '/usr/lib/node_modules/generator-angularjs-library',
+57 error   fstream_class: 'DirWriter',
+57 error   fstream_stack:
+57 error    [ '/usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+57 error      '/usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+57 error      'Object.oncomplete (fs.js:108:15)' ] }
+58 error Please try running this command again as root/Administrator.
+59 error System Linux 3.19.0-25-generic
+60 error command "/usr/bin/node" "/usr/bin/npm" "install" "-g" "generator-angularjs-library"
+61 error cwd /home/shikitan/github/digitalStorytelling/frontend
+62 error node -v v0.10.37
+63 error npm -v 1.4.28
+64 error path /usr/lib/node_modules/generator-angularjs-library
+65 error fstream_path /usr/lib/node_modules/generator-angularjs-library
+66 error fstream_type Directory
+67 error fstream_class DirWriter
+68 error code EACCES
+69 error errno 3
+70 error stack Error: EACCES, mkdir '/usr/lib/node_modules/generator-angularjs-library'
+71 error fstream_stack /usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+71 error fstream_stack /usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+71 error fstream_stack Object.oncomplete (fs.js:108:15)
+72 verbose exit [ 3, true ]
