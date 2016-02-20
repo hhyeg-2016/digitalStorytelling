@@ -1,6 +1,7 @@
 angular.module('dStory')
 .controller('displayController', ['$scope', 'dataService',
 function($scope, dataService) {
+
   $scope.data = function() {
     var d = [];
     var promise = dataService.getData();
@@ -13,13 +14,18 @@ function($scope, dataService) {
   };
 
   $scope.picture = function() {
-    var p = '';
-    var promise = dataService.getPicture();
-    promise.then(function(pic){
-      p = pic;
-    }, function(error) {
-      console.log(error);
-    });
+    console.log('called');
+    var closure = function() {
+      var promise = dataService.getPic();
+      var pic = promise.then(function(picData){
+        thing = picData;
+        return thing;
+      }, function(error) {
+        console.log(error);
+      });
+      return thing;
+    }
+    return closure();
   };
 
   $scope.isPicture = function(datum) {
