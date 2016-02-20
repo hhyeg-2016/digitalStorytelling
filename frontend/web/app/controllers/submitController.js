@@ -11,4 +11,4 @@ angular.module('dStory')
       reader.onload = $scope.imageIsLoaded;
       reader.readAsDataURL(file);
   };
-});
+}]);
