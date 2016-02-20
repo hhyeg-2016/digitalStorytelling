@@ -9,7 +9,7 @@ angular.module('dStory')
                 templateUrl: '/app/views/main.html'
               })
               .state('main.display', {
-                url: '/search',
+                url: '/display',
                 templateUrl: '/app/views/display.html'
               })
               .state('main.submit', {
