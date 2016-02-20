@@ -1,4 +1,3 @@
-
 angular.module('dStory')
         .config(function ($locationProvider, $stateProvider, $urlRouterProvider) {
             $locationProvider.html5Mode(true);
