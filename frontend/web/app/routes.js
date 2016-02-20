@@ -9,11 +9,11 @@ angular.module('dStory')
               })
               .state('main.display', {
                 url: '/display',
-                templateUrl: '/app/views/display.html',
-                  controller: "displayController"
+                controller: 'displayController',
+                templateUrl: '/app/views/display.html'
               })
               .state('main.submit', {
                 url: '/submit',
-                  templateUrl: '/app/views/submit.html'
+                templateUrl: '/app/views/submit.html'
               })
         });

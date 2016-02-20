@@ -1,29 +1,26 @@
 angular.module('dStory')
-.controller('displayController', ['$scope',
-function($scope) {
+.controller('displayController', ['$scope', 'dataService',
+function($scope, dataService) {
+  $scope.data = function() {
+    var d = [];
+    var promise = dataService.getData();
+    promise.then(function(data){
+      d = data.slice();
+    }, function(error) {
+      console.log(error);
+    });
+    return d;
+  };
 
-
-  $scope.profilePicture = "http://localhost:5000/static/img/elderly-man-smile.jpg";
-
-  $scope.pic = "static/img/elderly-man-smile.jpg";
-
-
-  $scope.profilePicture = "http://localhost:5000/static/img/elderly-man-smile.jpg";
-  $scope.pic = "static/img/elderly-man-smile.jpg";
-
-
-  $scope.data = [
-    {
-      type: 'text',
-      content: 'Morbi faucibus tortor ut mattis ultrices. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse.',
-      createdAt: '2016/11/14'
-    },
-    {
-      type: 'picture',
-      content: 'web/static/img/elderly-man-smile.jpg',
-      createdAt: '2016/11/20'
-    }
-  ];
+  $scope.picture = function() {
+    var p = '';
+    var promise = dataService.getPicture();
+    promise.then(function(pic){
+      p = pic;
+    }, function(error) {
+      console.log(error);
+    });
+  };
 
   $scope.isPicture = function(datum) {
     if(datum.type === 'picture'){
@@ -38,4 +35,6 @@ function($scope) {
     }
     return false;
   };
+
+
 }]);
