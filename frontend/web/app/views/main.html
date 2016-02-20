@@ -1,16 +1,16 @@
-<header>
+<header ng-controller="mainController">
     <md-toolbar>
         <div class="md-toolbar-tools">
             <!-- take up first 15% of toolbar -->
             <span flex="15"></span>
             <!-- logo that links to home page -->
-      <span flex="11">
+      <span flex="15">
         <A NG-HREF="index.html"><img ng-src="/static/img/DS.png" /></A>
       </span>
 
       <span flex="50">
 
-
+        {{getName()}}
         <A NG-HREF="index.html"><b>Chemistry Genealogy</b></A>
 
 
