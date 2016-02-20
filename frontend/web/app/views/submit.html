@@ -1,17 +1,16 @@
+<style>
+#page-wrap {
+  margin: 5%
+}
+</style>
 
-  <div ng-show="invalidLogin" layout="row" layout-align="center center">
-    <md-button ng-disabled="true" class="md-raised md-accent">Invalid login</md-button>
-  </div>
+<div id = "page-wrap">
 
-  <div ng-show="invalidRegistration" layout="row" layout-align="center center">
-    <md-button ng-disabled="true" class="md-raised md-accent">Invalid registration</md-button>
-  </div>
-
-  <form>
+  <form layout>
     Choose an upload type:
-    <input type="radio" ng-model="Picture" value="picture">Picture
-    <input type="radio" ng-model="Video" value="video">Video
-    <input type="radio" ng-model="Text" value="text">Text
+    <input type="radio" ng-model="uploadForm" value="picture">Picture
+    <input type="radio" ng-model="uploadForm" value="video">Video
+    <input type="radio" ng-model="uploadForm" value="text">Text
   </form>
 
   <div ng-switch="uploadForm">
@@ -35,28 +34,15 @@
 
   <div ng-show="!registration">
     <form name="userForm" ng-submit="submivtLogin(loginUser)">
-      <md-input-container class="md-block" flex-gt-xs>
-        <label>Email</label>
-        <input ng-model="loginUser.email" type="email" required>
-      </md-input-container>
-      <md-input-container class="md-block" flex-gt-xs>
-        <label>Password</label>
-        <input type="password" ng-model="loginUser.password" required>
-      </md-input-container>
       <div layout="row" layout-align="center center">
         <md-button class="md-raised md-primary" type="submit" value="Submit">
-          login
+          submit
         </md-button>
 
         <md-button class="md-raised md-primary" ng-click="cancelLogin()">
           cancel
         </md-button>
       </div>
-      <br>
-      <div layout="column">
-        <md-button class="md-raised md-primary" ng-click="toRegistrationView()" >
-          register
-        </md-button>
-      </div>
     </form>
   </div>
+</div>
