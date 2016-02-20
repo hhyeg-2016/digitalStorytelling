@@ -1,5 +1,5 @@
 
-angular.module('chemGeno')
+angular.module('dStory')
         .config(function ($locationProvider, $stateProvider, $urlRouterProvider) {
             $locationProvider.html5Mode(true);
             $urlRouterProvider.otherwise('/display');
@@ -10,7 +10,7 @@ angular.module('chemGeno')
               })
               .state('main.display', {
                 url: '/search',
-                templateUrl: '/app/views/search.html'
+                templateUrl: '/app/views/display.html'
               })
               .state('main.submit', {
                 url: '/submit',
