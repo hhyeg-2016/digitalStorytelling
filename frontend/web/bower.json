@@ -1,0 +1,26 @@
+{
+  "name": "frontend",
+  "description": "serves the angular app",
+  "license": "ISC",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.9",
+    "angular-material": "~1.0.4",
+    "angular-ui-router": "~0.2.18",
+    "a0-angular-storage": "~0.0.13",
+    "d3": "~3.5.15"
+  },
+  "resolutions": {
+    "angular": "1.5.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.5.0"
+  }
+}
