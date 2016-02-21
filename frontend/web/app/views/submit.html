@@ -9,6 +9,7 @@
   <form layout>
     Choose an upload type:
     <input type="radio" ng-model="uploadForm" value="picture">Picture
+    <input type="radio" ng-model="uploadForm" value="audio">Audio
     <input type="radio" ng-model="uploadForm" value="video">Video
     <input type="radio" ng-model="uploadForm" value="text">Text
   </form>
@@ -16,6 +17,11 @@
   <div ng-switch="uploadForm">
     <div ng-switch-when="picture">
       <form id="pictureUpload">
+        <input type="file" onchange="angular.element(this).scope().imageUpload(event)">
+      </form>
+    </div>
+    <div ng-switch-when="audio">
+      <form id="audioUpload">
         <input type="file" onchange="angular.element(this).scope().imageUpload(event)">
       </form>
     </div>
@@ -34,6 +40,12 @@
     </div>
   </div>
 
+  <form ng-submit="addDate()">
+    <md-input-container>
+      <label>Enter the date:</label>
+      <input ng-model="addDate" type="date">
+    </md-input-container>
+  </form>
 
   <div layout="row" layout-align="center center">
     <a ui-sref="main.display">
@@ -49,3 +61,4 @@
     </a>
   </div>
 </div>
+F

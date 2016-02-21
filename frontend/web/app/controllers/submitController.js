@@ -3,7 +3,9 @@ angular.module('dStory')
 
   $scope.master = {};
 
-  $scope.submit = function(element) {};
+  $scope.submit = function(element) {
+    var promise = dataService.pushData(element);
+  };
 
   $scope.imageUpload = function(event) {
       var file = event.target.files[0];
@@ -11,4 +13,5 @@ angular.module('dStory')
       reader.onload = $scope.imageIsLoaded;
       reader.readAsDataURL(file);
   };
+
 }]);
