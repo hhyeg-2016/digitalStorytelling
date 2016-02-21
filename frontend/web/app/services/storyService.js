@@ -3,6 +3,7 @@ angular.module('dStory')
 	var stories = [{
 			headpic: 'static/img/elderly-man-smile.jpg',
 			title: 'Big Smile for the ladies',
+      date: 'Jan 12th, 2010',
       descr: 'my grandpa pwns you all',
 			content:[
 				{
@@ -33,18 +34,21 @@ angular.module('dStory')
 		{
 			headpic: 'static/img/sample_3.jpg',
 			title: "I don't always drink energy drinks but when I do, I code for 10hours.",
+      date: 'Feb 20th, 2016',
       descr: 'One time we did all the things',
       content:[]
 		},
 		{
 			headpic: 'static/img/sample_4.jpg',
 			title: "Good place to spend weekends",
+      date: 'Feb 20th, 2016',
       descr: 'there was a good desc',
 			content:[]
 		},
 		{
 			headpic: 'static/img/sample_5.jpg',
 			title: "How much will it be if I sell this??? XD",
+      date: 'Feb 20th, 2016',
       descr: 'content',
 			content: []
 		}
