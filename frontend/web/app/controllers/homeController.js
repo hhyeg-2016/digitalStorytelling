@@ -25,7 +25,7 @@ function($scope, $state, storyService) {
 
   $scope.select = function(){
     console.log($scope.index);
-    $state.go('main.display', {id: $scope.index});
+    $state.go('display', {id: $scope.index});
   }
 
   $scope.prevStory = function() {
