@@ -8,7 +8,7 @@ angular.module('dStory')
 			content:[
 				{
 					type: 'picture',
-					url: 'static/img/sample_1.jpg'
+					url: 'static/img/sample_1_500.jpg'
 				},
 				{
 					type: 'text',
@@ -16,7 +16,7 @@ angular.module('dStory')
 				},
 				{
 					type: 'picture',
-					url: 'static/img/sample_2.jpg'
+					url: 'static/img/sample_2_500.jpg'
 				},
 				{
 					type: 'text',
@@ -24,7 +24,7 @@ angular.module('dStory')
 				},
 				{
 					type: 'picture',
-					url: 'static/img/sample_6.jpg'
+					url: 'static/img/sample_6_500.jpg'
 				},
 				{
 					type: 'text',
@@ -32,21 +32,21 @@ angular.module('dStory')
 				}
 			]},
 		{
-			headpic: 'static/img/sample_3.jpg',
+			headpic: 'static/img/sample_3_500.jpg',
 			title: "I don't always drink energy drinks but when I do, I code for 10hours.",
       date: 'Feb 20th, 2016',
       descr: 'One time we did all the things',
       content:[]
 		},
 		{
-			headpic: 'static/img/sample_4.jpg',
+			headpic: 'static/img/sample_4_500.jpg',
 			title: "Good place to spend weekends",
       date: 'Feb 20th, 2016',
       descr: 'there was a good desc',
 			content:[]
 		},
 		{
-			headpic: 'static/img/sample_5.jpg',
+			headpic: 'static/img/sample_5_500.jpg',
 			title: "How much will it be if I sell this??? XD",
       date: 'Feb 20th, 2016',
       descr: 'content',
