@@ -13,14 +13,15 @@ angular.module('dStory')
                 controller: 'submitController',
                 templateUrl: '/app/views/submit.html'
               })
-                .state('submitStory', {
-                    url: '/submitStory',
-                    controller: 'submitController',
-                    templateUrl: '/app/views/submitStory.html'
-                })
+              .state('submitStory', {
+                url: '/submitStory',
+                controller: 'submitController',
+                templateUrl: '/app/views/submitStory.html'
+              })
               .state('home', {
                 url: '/home',
                 controller: 'homeController',
                 templateUrl: '/app/views/home.html'
               })
+
         });
