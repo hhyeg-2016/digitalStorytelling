@@ -3,10 +3,10 @@ angular.module('dStory')
 	var currStory = {};
 	var stories = [
 		{
-			headpic: 'static/img/sample_4_500.jpg',
-			title: 'Big Smile for the ladies',
+			headpic: 'static/img/sample_7_500.jpg',
+			title: 'Health Hackathon 2016',
       date: 'Jan 12th, 2010',
-      descr: 'my grandpa pwns you all',
+      descr: 'Health Hackathon 2016',
 			content:[
 				{
 					type: 'picture',
