@@ -1,7 +1,7 @@
 angular.module('dStory')
         .config(function ($locationProvider, $stateProvider, $urlRouterProvider) {
             $locationProvider.html5Mode(true);
-            $urlRouterProvider.otherwise('/display');
+            $urlRouterProvider.otherwise('/home');
             $stateProvider
               .state('main', {
                 abstract: 'true',
@@ -16,5 +16,10 @@ angular.module('dStory')
                 url: '/submit',
                 controller: 'submitController',
                 templateUrl: '/app/views/submit.html'
+              })
+              .state('home', {
+                url: '/home',
+                controller: 'homeController',
+                templateUrl: '/app/views/home.html'
               })
         });
