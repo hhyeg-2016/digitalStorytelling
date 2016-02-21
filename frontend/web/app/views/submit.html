@@ -2,6 +2,13 @@
 #page-wrap {
   margin: 5%;
 }
+.outsetBorder{
+  border-top:10px solid #40C4FF;
+  border-left:10px solid #40C4FF;
+  border-right:10px solid #448AFF;
+  border-bottom:10px solid #448AFF;
+}
+
 </style>
 
 <header ng-controller="mainController">
@@ -35,14 +42,14 @@
 <div id = "page-wrap">
 
 <div layout="row" layout-align="center center">
-  <h1 style="font-size:250%;font-family:verdana;color:cadetblue;">
+  <h1 style="font-size:250%;font-family:verdana;">
     Update your story feed.
   </h1>
 </div>
 
 <div layout="row" layout-align="center center">
   <div
-  style="background-color:floralwhite;width:500px;height:400px;padding:10px;border:10px outset yellowgreen;">
+  style="background-color:ghostwhite;width:500px;height:400px;padding:10px;" class="outsetBorder">
     <br></br>
     <div layout="row" layout-align="center center">
       <form layout>
