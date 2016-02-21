@@ -1,70 +1,93 @@
 <style>
 #page-wrap {
-  margin: 5%
+  margin: 5%;
 }
 </style>
 
 <div id = "page-wrap">
-<div
-style="width:500px;height:200px;padding:10px;border:10px outset yellowgreen;">
-  <div layout="row" layout-align="center center">
-    <form layout>
 
-      Choose an upload type:
-      <input type="radio" ng-model="uploadForm" value="picture">Picture
-      <input type="radio" ng-model="uploadForm" value="audio">Audio
-      <input type="radio" ng-model="uploadForm" value="video">Video
-      <input type="radio" ng-model="uploadForm" value="text">Text
-    </form>
-  </div>
+<div layout="row" layout-align="center center">
+  <h1 style="font-size:250%;font-family:verdana;color:cadetblue;">
+    Upload your story feed.
+  </h1>
+</div>
 
-  <div ng-switch="uploadForm">
-    <div ng-switch-when="picture">
-      <form id="pictureUpload">
-        <input type="file" onchange="angular.element(this).scope().imageUpload(event)">
-      </form>
-    </div>
-    <div ng-switch-when="audio">
-      <form id="audioUpload">
-        <input type="file" onchange="angular.element(this).scope().imageUpload(event)">
-      </form>
-    </div>
-    <div ng-switch-when="video">
-      <form id="videoUpload">
-        <input type="file" onchange="angular.element(this).scope().imageUpload(event)">
-      </form>
-    </div>
-    <div ng-switch-when="text">
-      <form ng-submit="addText()">
-        <md-input-container>
-          <label>Enter your text here:</label>
-          <input ng-model="addText" type="text">
-        </md-input-container>
-      </form>
-    </div>
-  </div>
-
-  <form ng-submit="addDate()">
+<div layout="row" layout-align="center center">
+  <div
+  style="background-color:floralwhite;width:500px;height:400px;padding:10px;border:10px outset yellowgreen;">
     <div layout="row" layout-align="center center">
-      <md-input-container>
-        <label>Enter the date:</label>
-        <input ng-model="addDate" type="date">
-      </md-input-container>
+      <form layout>
+
+        Choose an upload type:
+        <input type="radio" ng-model="uploadForm" value="picture">Picture
+        <input type="radio" ng-model="uploadForm" value="audio">Audio
+        <input type="radio" ng-model="uploadForm" value="video">Video
+        <input type="radio" ng-model="uploadForm" value="text">Text
+      </form>
     </div>
-  </form>
 
-  <div layout="row" layout-align="center center">
-    <a ui-sref="main.display">
-      <md-button class="md-raised md-primary" type="submit" value="Submit">
-        submit
-      </md-button>
-    </a>
+    <div ng-switch="uploadForm">
+      <div ng-switch-when="picture">
+        <br></br>
+        <div layout="row" layout-align="center center">
+          <form id="pictureUpload">
+            <input type="file" onchange="angular.element(this).scope().imageUpload(event)">
+          </form>
+        </div>
+        <br></br>
+      </div>
+      <div ng-switch-when="audio">
+        <br></br>
+        <div layout="row" layout-align="center center">
+          <form id="audioUpload">
+            <input type="file" onchange="angular.element(this).scope().imageUpload(event)">
+          </form>
+        </div>
+        <br></br>
+      </div>
+      <div ng-switch-when="video">
+        <br></br>
+        <div layout="row" layout-align="center center">
+          <form id="videoUpload">
+            <input type="file" onchange="angular.element(this).scope().imageUpload(event)">
+          </form>
+        </div>
+        <br></br>
+      </div>
+      <div ng-switch-when="text">
+        <div layout="row" layout-align="center center">
+          <form ng-submit="addText()">
+            <md-input-container>
+              <label>Enter your text here:</label>
+              <input ng-model="addText" type="text">
+            </md-input-container>
+          </form>
+        </div>
+      </div>
+    </div>
 
-    <a ui-sref="main.display">
-      <md-button class="md-raised md-primary">
-      cancel
-      </md-button>
-    </a>
+    <form ng-submit="addDate()">
+      <div layout="row" layout-align="center center">
+        <md-input-container>
+          <label>Enter the date:</label>
+          <input ng-model="addDate" type="date">
+        </md-input-container>
+      </div>
+    </form>
+
+    <div layout="row" layout-align="center center">
+      <a ui-sref="main.display">
+        <md-button class="md-raised md-primary" type="submit" value="Submit">
+          submit
+        </md-button>
+      </a>
+
+      <a ui-sref="main.display">
+        <md-button class="md-raised md-primary">
+        cancel
+        </md-button>
+      </a>
+    </div>
   </div>
 </div>
 

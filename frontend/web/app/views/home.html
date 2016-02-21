@@ -12,6 +12,37 @@
   }
 </style>
 
+<header ng-controller="mainController">
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <!-- take up first 15% of toolbar -->
+      <span flex="20"></span>
+      <!-- logo that links to home page -->
+      <span flex="30">
+        <A NG-HREF="index.html"><img ng-src="/static/img/DS copy.png" /></A>
+      </span>
+
+      <span flex="30">
+
+        {{getName()}}
+
+
+
+
+      </span>
+      <span flex="10">
+        <a ui-sref="main.submitStory"> <md-button class="md-fab md-accent">
+          <md-icon md-svg-src="/static/img/ic_add_black_24px.svg"></md-icon>
+        </md-button> </a>
+        </span>
+      <span flex="15">
+
+
+      </span>
+    </div>
+  </md-toolbar>
+</header>
+
 <md-content class="md-padding" id="homeContainer">
   <md-button class="md-raised" aria-label="Eat cake" ng-click="nextStory()">
     <md-icon md-svg-src="static/img/ic_undo_black_24px.svg"></md-icon>
