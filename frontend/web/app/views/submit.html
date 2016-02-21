@@ -5,14 +5,18 @@
 </style>
 
 <div id = "page-wrap">
+<div
+style="width:500px;height:200px;padding:10px;border:10px outset yellowgreen;">
+  <div layout="row" layout-align="center center">
+    <form layout>
 
-  <form layout>
-    Choose an upload type:
-    <input type="radio" ng-model="uploadForm" value="picture">Picture
-    <input type="radio" ng-model="uploadForm" value="audio">Audio
-    <input type="radio" ng-model="uploadForm" value="video">Video
-    <input type="radio" ng-model="uploadForm" value="text">Text
-  </form>
+      Choose an upload type:
+      <input type="radio" ng-model="uploadForm" value="picture">Picture
+      <input type="radio" ng-model="uploadForm" value="audio">Audio
+      <input type="radio" ng-model="uploadForm" value="video">Video
+      <input type="radio" ng-model="uploadForm" value="text">Text
+    </form>
+  </div>
 
   <div ng-switch="uploadForm">
     <div ng-switch-when="picture">
@@ -41,10 +45,12 @@
   </div>
 
   <form ng-submit="addDate()">
-    <md-input-container>
-      <label>Enter the date:</label>
-      <input ng-model="addDate" type="date">
-    </md-input-container>
+    <div layout="row" layout-align="center center">
+      <md-input-container>
+        <label>Enter the date:</label>
+        <input ng-model="addDate" type="date">
+      </md-input-container>
+    </div>
   </form>
 
   <div layout="row" layout-align="center center">
@@ -59,5 +65,9 @@
       cancel
       </md-button>
     </a>
+  </div>
+</div>
+
+
   </div>
 </div>
