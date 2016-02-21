@@ -15,12 +15,13 @@
     <div layout="row" layout-align="center center">
         <div
                 style="background-color:floralwhite;width:500px;height:400px;padding:10px;border:10px outset yellowgreen;">
+            <br></br>
             <div layout="row" layout-align="center center">
                 <form id="audioUpload">
                     <input type="file" onchange="angular.element(this).scope().imageUpload(event)">
                 </form>
             </div>
-            <br></br>
+
             <div layout="row" layout-align="center center">
                 <form ng-submit="addText()">
                     <md-input-container>
@@ -29,7 +30,7 @@
                     </md-input-container>
                 </form>
             </div>
-           
+
             <div layout="row" layout-align="center center">
                 <form ng-submit="addText()">
                     <md-input-container>
