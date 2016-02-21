@@ -1,5 +1,5 @@
 angular.module('dStory')
-.controller('submitController', ['$scope', 'dataService', function($scope, dataService) {
+.controller('submitController', ['$scope', 'dataService', '$state', function($scope, $state, dataService) {
 
   $scope.master = {};
 
