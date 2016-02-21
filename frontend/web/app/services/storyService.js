@@ -1,5 +1,6 @@
 angular.module('dStory')
 .service('storyService', function($q) {
+	var currStory = {};
 	var stories = [{
 			headpic: 'static/img/elderly-man-smile.jpg',
 			title: 'Big Smile for the ladies',
@@ -54,6 +55,7 @@ angular.module('dStory')
 		}
   ];
   return {
-    stories: stories
+    stories: stories,
+		currStory: currStory
   }
 });

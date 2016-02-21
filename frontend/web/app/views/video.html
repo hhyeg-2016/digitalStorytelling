@@ -1,0 +1,33 @@
+<div class="contentBox">
+  <div ng-if="isPicture(currContent)">
+    <md-card>
+      <img ng-src="{{currContent.url}}" class="md-card-image" alt="Washed Out" height="42" width="42">
+    </md-card>
+  </div>
+  <div ng-if="isText(currContent)">
+    <md-card>
+      <md-card-content>
+        <p>
+          {{currContent.content}}
+        </p>
+      </md-card-content>
+    </md-card>
+  </div>
+<!--
+<div ng-repeat="c in content">
+  <div ng-if="isPicture(c)">
+    <md-card>
+      <img ng-src="{{c.url}}" class="md-card-image" alt="Washed Out" height="42" width="42">
+    </md-card>
+  </div>
+  <div ng-if="isText(c)">
+    <md-card>
+      <md-card-content>
+        <p>
+          {{c.content}}
+        </p>
+      </md-card-content>
+    </md-card>
+  </div>
+</div>
+-->

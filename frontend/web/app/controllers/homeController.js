@@ -1,6 +1,6 @@
 angular.module('dStory')
-.controller('homeController', ['$scope', '$state', 'storyService',
-function($scope, $state, storyService) {
+.controller('homeController', ['$scope', '$state', 'storyService', '$mdMedia', '$mdDialog',
+function($scope, $state, storyService, $mdMedia, $mdDialog) {
   console.log(storyService);
   $scope.stories = storyService.stories;
   console.log($scope.stories);
@@ -22,11 +22,31 @@ function($scope, $state, storyService) {
       console.log('scope index out of bounds nextStory');
     }
   };
-
+/*
   $scope.select = function(){
     console.log($scope.index);
     $state.go('display', {id: $scope.index});
   }
+*/
+  $scope.select = function($event) {
+    storyService.currStory = $scope.currStory; 
+    var useFullScreen = ($mdMedia('sm') || $mdMedia('xs'))  && $scope.customFullscreen;
+    //For this chunk, information on what the user will have displayed to them as the login is here.
+    $mdDialog.show({
+      controller: 'videoController',
+      templateUrl: '/app/views/video.html',
+      parent: angular.element(document.body),
+      targetEvent: $event,
+      clickOutsideToClose:true,
+      fullscreen: useFullScreen
+    });
+    $scope.$watch(function() {
+      return $mdMedia('xs') || $mdMedia('sm');
+    }, function(wantsFullScreen) {
+      $scope.customFullscreen = (wantsFullScreen === true);
+    });
+  };
+
 
   $scope.prevStory = function() {
     console.log('prevStory');
