@@ -1,4 +1,4 @@
 angular.module('dStory')
-.service('dataService', function($q) {
-  
+.service('storyService', function($q) {
+
 });
