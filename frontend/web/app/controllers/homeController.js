@@ -1,6 +1,9 @@
 angular.module('dStory')
-.controller('homeController', ['$scope', 'storyService', function($scope, storyService) {
+.controller('homeController', ['$scope', '$state', 'storyService',
+function($scope, $state, storyService) {
+  console.log(storyService);
   $scope.stories = storyService.stories;
+  console.log($scope.stories);
   $scope.index = 0;
   $scope.currStory = $scope.stories[$scope.index];
   console.log($scope.currStory);
@@ -19,6 +22,11 @@ angular.module('dStory')
       console.log('scope index out of bounds nextStory');
     }
   };
+
+  $scope.select = function(){
+    console.log($scope.index);
+    $state.go('main.display', {id: $scope.index});
+  }
 
   $scope.prevStory = function() {
     console.log('prevStory');

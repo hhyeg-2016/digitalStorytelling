@@ -1,32 +1,9 @@
 angular.module('dStory')
-.controller('displayController', ['$scope', 'dataService',
-function($scope, dataService) {
-  $scope.pic = "";
-
-  $scope.data = function() {
-    var d = [];
-    var promise = dataService.getData();
-    promise.then(function(data){
-      d = data.slice();
-    }, function(error) {
-      console.log(error);
-    });
-    return d;
-  };
-
-  $scope.picture = function() {
-    var closure = function() {
-      var promise = dataService.getPic();
-      var pic = promise.then(function(picData){
-        $scope.pic = picData;
-      }, function(error) {
-        console.log(error);
-      });
-    }
-    return closure();
-  };
-
-  $scope.picture();
+.controller('displayController', ['$scope', 'dataService', '$stateParams',
+function($scope, dataService,$stateParams) {
+  console.log($stateParams.id);
+  $scope.index = $stateParams.id;
+  console.log($scope.index);
 
   $scope.isPicture = function(datum) {
     if(datum.type === 'picture'){

@@ -8,7 +8,7 @@ angular.module('dStory')
                 templateUrl: '/app/views/main.html'
               })
               .state('main.display', {
-                url: '/display',
+                url: '/display/:id',
                 controller: 'displayController',
                 templateUrl: '/app/views/display.html'
               })
