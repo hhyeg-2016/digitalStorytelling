@@ -31,7 +31,7 @@ function($scope, $state, storyService, $mdMedia, $mdDialog) {
   }
 */
   $scope.select = function($event) {
-    storyService.currStory = $scope.currStory; 
+    storyService.currStory = $scope.currStory;
     var useFullScreen = ($mdMedia('sm') || $mdMedia('xs'))  && $scope.customFullscreen;
     //For this chunk, information on what the user will have displayed to them as the login is here.
     $mdDialog.show({
@@ -48,6 +48,7 @@ function($scope, $state, storyService, $mdMedia, $mdDialog) {
       $scope.customFullscreen = (wantsFullScreen === true);
     });
   };
+
 
 
   $scope.prevStory = function() {

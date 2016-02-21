@@ -23,5 +23,9 @@ angular.module('dStory')
                 controller: 'homeController',
                 templateUrl: '/app/views/home.html'
               })
-
+              .state('blank', {
+                url: '/blank',
+                controller: 'blankController',
+                templateUrl: '/app/views/blank.html'
+              })
         });
