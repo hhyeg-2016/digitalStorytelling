@@ -8,6 +8,7 @@ angular.module('dStory')
     console.log($scope.title);
     console.log($scope.descr);
     storyService.pushStory({headpic: $scope.imageUrl, title:  $scope.title, descr: $scope.descr});
+    $state.go('home');
   };
 
   $scope.imageUpload = function(event) {
@@ -21,5 +22,6 @@ angular.module('dStory')
     $scope.$apply(function() {
       $scope.imageUrl = e.target.result;
     });
+
   };
 }]);
