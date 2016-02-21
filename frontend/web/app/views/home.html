@@ -45,8 +45,8 @@
     <md-icon md-svg-src="static/img/ic_undo_black_24px.svg"></md-icon>
   </md-button>
 
-  <md-card>
-    <img ng-src="static/img/elderly-man-smile.jpg" class="md-card-image" alt="Washed Out">
+  <md-card ng-click="select($index)">
+    <img ng-src="{{currStory.headpic}}" class="md-card-image" alt="Washed Out">
     <br>
     <md-card-title>
       <md-card-title-text>
@@ -62,7 +62,7 @@
     </md-card-content>
   </md-card>
 
-  <md-button class="md-raised" aria-label="Eat cake">
+  <md-button class="md-raised" aria-label="Eat cake" ng-click="nextStory()">
     <md-icon md-svg-src="static/img/ic_redo_black_24px.svg"></md-icon>
   </md-button>
 

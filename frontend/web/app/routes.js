@@ -4,7 +4,7 @@ angular.module('dStory')
             $urlRouterProvider.otherwise('/home');
             $stateProvider
               .state('display', {
-                url: '/display',
+                url: '/display/:id',
                 controller: 'displayController',
                 templateUrl: '/app/views/display.html'
               })
