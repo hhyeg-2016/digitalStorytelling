@@ -1,7 +1,8 @@
 angular.module('dStory')
 .service('storyService', function($q) {
 	var currStory = {};
-	var stories = [{
+	var stories = [
+		{
 			headpic: 'static/img/sample_4_500.jpg',
 			title: 'Big Smile for the ladies',
       date: 'Jan 12th, 2010',
@@ -47,8 +48,16 @@ angular.module('dStory')
 			content: []
 		}
   ];
+
+	var pushStory = function(story){
+		console.log('stories');
+		console.log(story);
+		this.stories.push(story);
+	};
+
   return {
     stories: stories,
-		currStory: currStory
+		currStory: currStory,
+		pushStory: pushStory
   }
 });

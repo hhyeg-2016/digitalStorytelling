@@ -36,8 +36,6 @@
         </div>
     </md-toolbar>
 </header>
-<div ui-view></div>
-
 <div id = "page-wrap">
 
     <div layout="row" layout-align="center center">
@@ -51,7 +49,11 @@
                 style="background-color:ghostwhite;width:500px;height:400px;padding:10px;" class="outsetBorder">
             <br></br>
             <div layout="row" layout-align="center center">
-                <form id="audioUpload">
+              <md-button ng-disabled="true" class="md-primary">header picture</md-button>
+            </div>
+            <br>
+            <div layout="row" layout-align="center center">
+                <form id="headerUpload">
                     <input type="file" onchange="angular.element(this).scope().imageUpload(event)">
                 </form>
             </div>
@@ -60,7 +62,7 @@
                 <form ng-submit="addText()">
                     <md-input-container>
                         <label>Enter Story Title:</label>
-                        <input ng-model="addTitle" type="text">
+                        <input ng-model="title" type="text" required>
                     </md-input-container>
                 </form>
             </div>
@@ -69,19 +71,15 @@
                 <form ng-submit="addText()">
                     <md-input-container>
                         <label>Enter Story Description:</label>
-                        <input ng-model="addDesc" type="text">
+                        <input ng-model="descr" type="text" required>
                     </md-input-container>
                 </form>
             </div>
 
-
-
             <div layout="row" layout-align="center center">
-                <a ui-sref="display">
-                    <md-button class="md-raised md-primary" type="submit" value="Submit">
-                        submit
-                    </md-button>
-                </a>
+                <md-button class="md-raised md-primary" type="submit" ng-click="submit()">
+                  submit
+                </md-button>
 
                 <a ui-sref="home">
                     <md-button class="md-raised md-primary">
