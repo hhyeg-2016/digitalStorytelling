@@ -15,7 +15,7 @@ angular.module('dStory')
               })
               .state('submitStory', {
                 url: '/submitStory',
-                controller: 'submitController',
+                controller: 'submitStoryController',
                 templateUrl: '/app/views/submitStory.html'
               })
               .state('home', {

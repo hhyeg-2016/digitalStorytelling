@@ -1,10 +1,10 @@
 angular.module('dStory')
-.controller('submitController', ['$scope', 'dataService', '$state', function($scope, $state, dataService) {
+.controller('submitController', ['$scope', 'storyService', '$state', function($scope, $state, storyService) {
 
   $scope.master = {};
 
   $scope.submit = function(element) {
-    var promise = dataService.pushData(element);
+    storyService.pushStory(element);
   };
 
   $scope.imageUpload = function(event) {
