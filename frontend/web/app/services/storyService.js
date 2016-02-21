@@ -13,40 +13,36 @@ angular.module('dStory')
 					url: 'static/img/sample_1_500.jpg'
 				},
 				{
-					type: 'text',
-					content: 'How long has it been now? 12hrs? Coding for 12 hours!'
-				},
-				{
-					type: 'picture',
-					url: 'static/img/sample_2_500.jpg'
-				},
-				{
-					type: 'text',
-					content: 'me and Jake Brogrmming!'
-				},
-				{
 					type: 'picture',
 					url: 'static/img/sample_6_500.jpg'
 				},
 				{
 					type: 'text',
-					content: 'You know the old saying, if you leave food you will end up in hell'
+					content: 'On the second day, we coded for 12 hours straight!'
+				},
+				{
+					type: 'picture',
+					url: 'static/img/sample_3_500.jpg'
 				}
+
 			]},
 		{
-			headpic: 'static/img/sample_3_500.jpg',
-			title: "I don't always drink energy drinks but when I do, I code for 10hours.",
+			headpic: 'static/img/family.jpg',
+			title: "Me and my family eating out.",
       date: 'Feb 20th, 2016',
       descr: 'One time we did all the things',
       content:[]
 		},
 		{
-			headpic: 'static/img/sample_5_500.jpg',
-			title: "How much will it be if I sell this??? XD",
-      date: 'Feb 20th, 2016',
-      descr: 'content',
-			content: []
+			headpic: 'static/img/skiing.jpg',
+			title: "Skiing in Fernie with friends.",
+			date: 'Feb 20th, 2016',
+			descr: 'One time we did all the things',
+			content:[]
 		}
+
+
+
   ];
 
 	var pushStory = function(story){
