@@ -1,12 +1,13 @@
 angular.module('dStory')
 .service('storyService', function($q) {
-	var story = [{
+	var stories = [{
 			headpic: 'static/img/elderly-man-smile.jpg',
 			title: 'Big Smile for the ladies',
+      descr: 'my grandpa pwns you all',
 			content:[
 				{
 					type: 'picture',
-					url: 'web/static/img/sample_1.jpg'
+					url: 'static/img/sample_1.jpg'
 				},
 				{
 					type: 'text',
@@ -14,7 +15,7 @@ angular.module('dStory')
 				},
 				{
 					type: 'picture',
-					url: 'web/static/img/sample_2.jpg'
+					url: 'static/img/sample_2.jpg'
 				},
 				{
 					type: 'text',
@@ -22,7 +23,7 @@ angular.module('dStory')
 				},
 				{
 					type: 'picture',
-					url: 'web/static/img/sample_6.jpg'
+					url: 'static/img/sample_6.jpg'
 				},
 				{
 					type: 'text',
@@ -32,17 +33,23 @@ angular.module('dStory')
 		{
 			headpic: 'static/img/sample_3.jpg',
 			title: "I don't always drink energy drinks but when I do, I code for 10hours.",
-			content:[]
+      descr: 'One time we did all the things',
+      content:[]
 		},
 		{
 			headpic: 'static/img/sample_4.jpg',
 			title: "Good place to spend weekends",
+      descr: 'there was a good desc',
 			content:[]
 		},
 		{
 			headpic: 'static/img/sample_5.jpg',
-			title: "How much will it be if I sell this??? XD"
+			title: "How much will it be if I sell this??? XD",
+      descr: 'content',
 			content: []
-		}		
-	}
+		}
+  ];
+  return {
+    stories: stories
+  }
 });

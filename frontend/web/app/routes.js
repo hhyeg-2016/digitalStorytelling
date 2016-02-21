@@ -22,7 +22,7 @@ angular.module('dStory')
                     controller: 'submitController',
                     templateUrl: '/app/views/submitStory.html'
                 })
-              .state('home', {
+              .state('main.home', {
                 url: '/home',
                 controller: 'homeController',
                 templateUrl: '/app/views/home.html'
