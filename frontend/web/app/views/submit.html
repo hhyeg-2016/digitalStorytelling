@@ -4,11 +4,39 @@
 }
 </style>
 
+<header ng-controller="mainController">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <!-- take up first 15% of toolbar -->
+            <span flex="20"></span>
+            <!-- logo that links to home page -->
+      <span flex="30">
+        <A NG-HREF="index.html"><img ng-src="/static/img/DS copy.png" /></A>
+      </span>
+
+      <span flex="30">
+
+        Welcome, John Doe!
+
+      </span>
+      <span flex="10">
+        <a ui-sref="submitStory"> <md-button class="md-fab md-accent">
+            <md-icon md-svg-src="/static/img/ic_add_black_24px.svg"></md-icon>
+        </md-button> </a>
+        </span>
+      <span flex="15">
+
+      </span>
+        </div>
+    </md-toolbar>
+</header>
+<div ui-view></div>
+
 <div id = "page-wrap">
 
 <div layout="row" layout-align="center center">
   <h1 style="font-size:250%;font-family:verdana;color:cadetblue;">
-    Upload your story feed.
+    Update your story feed.
   </h1>
 </div>
 
@@ -78,13 +106,13 @@
     </form>
 
     <div layout="row" layout-align="center center">
-      <a ui-sref="main.display">
+      <a ui-sref="home">
         <md-button class="md-raised md-primary" type="submit" value="Submit">
           submit
         </md-button>
       </a>
 
-      <a ui-sref="main.display">
+      <a ui-sref="home">
         <md-button class="md-raised md-primary">
         cancel
         </md-button>

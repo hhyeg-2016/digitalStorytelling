@@ -12,30 +12,71 @@
   }
 </style>
 
+<header ng-controller="mainController">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <!-- take up first 15% of toolbar -->
+            <span flex="20"></span>
+            <!-- logo that links to home page -->
+      <span flex="30">
+        <A NG-HREF="index.html"><img ng-src="/static/img/DS copy.png" /></A>
+      </span>
+
+      <span flex="30">
+
+        Welcome, John Doe!
+
+      </span>
+      <span flex="10">
+        <a ui-sref="submitStory"> <md-button class="md-fab md-accent">
+            <md-icon md-svg-src="/static/img/ic_add_black_24px.svg"></md-icon>
+        </md-button> </a>
+        </span>
+      <span flex="15">
+
+      </span>
+        </div>
+    </md-toolbar>
+</header>
+
 <md-content class="md-padding" id="homeContainer">
   <md-button class="md-raised" aria-label="Eat cake" ng-click="prevStory()">
     <md-icon md-svg-src="static/img/ic_undo_black_24px.svg"></md-icon>
   </md-button>
-  <md-card ng-click="select($index)">
 
+  <md-card ng-click="select($index)">
     <img ng-src="{{currStory.headpic}}" class="md-card-image" alt="Washed Out">
     <br>
-    <md-card-title>
-      <md-card-title-text>
-        <span>{{currStory.title}}</span>
-      </md-card-title-text>
-    </md-card-title>
-    <br>
     <md-card-content>
-      {{currStory.desc}}
+      <p>
+        {{currStory.title}}
+      </p>
     </md-card-content>
   </md-card>
+
   <md-button class="md-raised" aria-label="Eat cake" ng-click="nextStory()">
     <md-icon md-svg-src="static/img/ic_redo_black_24px.svg"></md-icon>
   </md-button>
+</md-content>
 
-  <a ui-sref="main.submitStory"> <md-button class="md-fab md-accent">
-    <md-icon md-svg-src="/static/img/ic_add_black_24px.svg"></md-icon>
-  </md-button> </a>
+<div layout="row" layout-align="center center">
+
+  <button
+    style="display: block;
+    height: 70;
+    width: 200px;
+    background: DarkCyan;
+    border: 2px solid rgba(33, 68, 72, 0.59);
+    color: AliceBlue;
+    text-align: center;
+    font: bold;
+
+    background: linear-gradient(top, #34696f, #2f5f63);
+    border-radius: 50px;
+    box-shadow: 0 8px 0 #1b383b;"
+
+    type="button">Add to this story
+  </button>
+</div>
 
 </md-content>
