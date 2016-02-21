@@ -11,7 +11,7 @@
     box-shadow: 3px 3px 5px 6px #ccc;
   }
 </style>
-
+<div ng-if"!hidden">
 <header ng-controller="mainController">
     <md-toolbar>
         <div class="md-toolbar-tools">
@@ -74,8 +74,9 @@
     border-radius: 50px;
     box-shadow: 0 8px 0 #1b383b;"
 
-    type="button" ui-sref="submitStory">Add to this story
+    type="button" ui-sref="submit">Add to this story
   </button>
 </div>
 
 </md-content>
+</div>

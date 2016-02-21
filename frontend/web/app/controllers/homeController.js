@@ -8,6 +8,8 @@ function($scope, $state, storyService, $mdMedia, $mdDialog) {
   $scope.currStory = $scope.stories[$scope.index];
   console.log($scope.currStory);
   console.log($scope.index);
+  $scope.hidden = false;
+
 
   $scope.nextStory = function() {
     console.log($scope.index);

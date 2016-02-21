@@ -2,7 +2,7 @@ angular.module('dStory')
 .service('storyService', function($q) {
 	var currStory = {};
 	var stories = [{
-			headpic: 'static/img/elderly-man-smile.jpg',
+			headpic: 'static/img/sample_4_500.jpg',
 			title: 'Big Smile for the ladies',
       date: 'Jan 12th, 2010',
       descr: 'my grandpa pwns you all',
@@ -38,13 +38,6 @@ angular.module('dStory')
       date: 'Feb 20th, 2016',
       descr: 'One time we did all the things',
       content:[]
-		},
-		{
-			headpic: 'static/img/sample_4_500.jpg',
-			title: "Good place to spend weekends",
-      date: 'Feb 20th, 2016',
-      descr: 'there was a good desc',
-			content:[]
 		},
 		{
 			headpic: 'static/img/sample_5_500.jpg',
