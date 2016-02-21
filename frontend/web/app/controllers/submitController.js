@@ -1,10 +1,9 @@
 angular.module('dStory')
-.controller('submitController', ['$scope', 'dataService', function($scope, dataService) {
+.controller('submitController', ['$scope', 'dataService', '$state', function($scope, $state, dataService) {
 
   $scope.master = {};
 
   $scope.submit = function(element) {};
-
   $scope.imageUpload = function(event) {
       var file = event.target.files[0];
       var reader = new FileReader();
